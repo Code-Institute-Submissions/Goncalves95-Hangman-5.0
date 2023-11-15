@@ -4,8 +4,8 @@ import os
 
 def main():
     words = [
-        {'word': 'pineapple', "hint': 'It's a tropical fruit."},
-        {'word': 'strawberry', "hint': 'It's a small, red fruit."},
+        {'word': 'pineapple', 'hint': "It's a tropical fruit."},
+        {'word': 'strawberry', 'hint': "It's a small, red fruit."},
         {'word': 'kiwi', 'hint': "It's a small, brown, and fuzzy fruit."},
         {'word': 'watermelon', 'hint': "It's a large fruit, green on the outside and red on the inside."},
         {'word': 'grape', 'hint': "It's a small, round fruit, often found in clusters."},
@@ -25,8 +25,8 @@ def main():
 
     while True:
         display_word = ""
-        for letter in scret_word:
-            if letter in guessed_letter:
+        for letter in secret_word:
+            if letter in guessed_letters:
                 display_word += letter
             else:
                 display_word += "_"
@@ -35,8 +35,12 @@ def main():
         print(f"Attempts left: {attempts}")
         print(f"Guessed letters: {', '.join(guessed_letters)}")
 
-        if display_word = secret_word:
+        if display_word == secret_word:
             print("Congratulations! You guessed the word correctly.")
+            break
+
+        if attempts == 0:
+            print("Game over! The secret word was '{secret_word}'.")
             break
 
 
