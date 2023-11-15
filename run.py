@@ -19,7 +19,7 @@ def main():
     guessed_letters = []
     attempts = 6
 
-    print("Welcome to Hangman!")
+    print("Welcome to Hangman 5.0!")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
 
@@ -57,6 +57,10 @@ def main():
         else:
             print("Invalid input. Please enter a single letter.")
             continue
+
+        print("Welcome to Hangman 5.0!")
+        print("Try to guess the hidden word. You have 6 attempts.")
+        print(f"\nHint: {hint}")
 
 
 # Start the game (call the main function)
