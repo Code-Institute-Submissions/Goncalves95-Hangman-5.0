@@ -2,12 +2,14 @@ import random
 import os
 
 
+# Function to clean the console screen when the next atempt
 def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# Function for the rules presentation
 def rules():
-    print("Welcome to Hangman!")
+    print("Welcome to Hangman 5.0!")
     print("Game rules:")
     print("1. You must guess the hidden word before you run out of tries.")
     print("2. You have 6 attempts.")
@@ -15,12 +17,15 @@ def rules():
     print("4. Good luck!")
 
 
+# Function for get the player name 
 def get_player_name():
     player = input("What is your name? ")
     print(f"\nHello, {player}! Let's start the game!\n")
 
 
+# Main function for the game 
 def main():
+    # All the words the game gone display random
     words = [
         {'word': 'pineapple', 'hint': "It's a tropical fruit."},
         {'word': 'strawberry', 'hint': "It's a small, red fruit."},
@@ -37,6 +42,7 @@ def main():
     guessed_letters = []
     attempts = 6
 
+    # First's prinst for appear on game menu
     print("Welcome to Hangman 5.0!")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
@@ -61,8 +67,10 @@ def main():
             print("Game over! The secret word was '{secret_word}'.")
             break
 
+        # Input for the palyer put the guess letter
         guess = input("Guess a letter: ").lower()
 
+        # IF/ELSE to check the right letter or wrong letter and a valid input
         if guess.isalpha() and len(guess) == 1:
             if guess in guessed_letters:
                 print("You already guessed that letter. Try again.")
@@ -75,7 +83,8 @@ def main():
         else:
             print("Invalid input. Please enter a single letter.")
             continue
-
+        
+        # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
         print("Welcome to Hangman 5.0!")
         print("Try to guess the hidden word. You have 6 attempts.")
