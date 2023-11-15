@@ -1,8 +1,18 @@
 import random
 import os
 
+
 def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def rules():
+    print("Welcome to Hangman 5.0!")
+    print("Game rules:")
+    print("1. You must guess the hidden word before you run out of tries.")
+    print("2. You have 6 attempts.")
+    print("3. Each incorrect letter results in the removal of one attempt.")
+    print("4. Good luck!") 
 
 
 def main():
@@ -68,4 +78,5 @@ def main():
 
 
 # Start the game (call the main function)
+rules()
 main()
