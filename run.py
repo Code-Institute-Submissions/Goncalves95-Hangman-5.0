@@ -7,6 +7,17 @@ def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# Function for display a big name from the game
+def display_title():
+    print("""
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░██░█░▄▄▀██░▀██░██░▄▄░██░▄▀▄░█░▄▄▀██░▀██░███░▄▄████░▄▄░
+██░▄▄░█░▀▀░██░█░█░██░█▀▀██░█░█░█░▀▀░██░█░█░███▄▄▀█▀▀█░▀▄░
+██░██░█░██░██░██▄░██░▀▀▄██░███░█░██░██░██▄░███▀▀▄█▄▄█░▀▀░
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+    """)
+
+
 # Function for the rules presentation
 def rules():
     print("Welcome to Hangman 5.0!")
@@ -17,7 +28,7 @@ def rules():
     print("4. Good luck!")
 
 
-# Function for get the player name 
+# Function for get the player name
 def get_player_name():
     player = input("What is your name? ")
     print(f"\nHello, {player}! Let's start the game!\n")
@@ -43,6 +54,7 @@ def main():
     attempts = 6
 
     # First's prinst for appear on game menu
+    display_title()
     print("Welcome to Hangman 5.0!")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
@@ -86,10 +98,12 @@ def main():
         
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
+        display_title()
         print("Welcome to Hangman 5.0!")
         print("Try to guess the hidden word. You have 6 attempts.")
         print(f"\nHint: {hint}")
 
+    # Play again if/else
     play_again = input("Do you want play again? (yes/no): ")
 
     if play_again.lower() == "yes":
@@ -100,6 +114,7 @@ def main():
 
 
 # Display rules and get player name
+display_title()
 rules()
 get_player_name()
 
