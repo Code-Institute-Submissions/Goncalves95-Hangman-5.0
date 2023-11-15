@@ -38,3 +38,7 @@ def main():
         if display_word = secret_word:
             print("Congratulations! You guessed the word correctly.")
             break
+
+
+# Start the game (call the main function)
+main()
