@@ -129,6 +129,7 @@ def main():
         print(f"\nWord: {display_word}")
         print(f"Attempts left: {attempts}")
         print(f"Guessed letters: {', '.join(guessed_letters)}")
+        # Display the Hangman status
         print(hangman_status[6 - attempts])
 
         if display_word == secret_word:
