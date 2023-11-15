@@ -7,12 +7,17 @@ def clean_screen():
 
 
 def rules():
-    print("Welcome to Hangman 5.0!")
+    print("Welcome to Hangman!")
     print("Game rules:")
     print("1. You must guess the hidden word before you run out of tries.")
     print("2. You have 6 attempts.")
     print("3. Each incorrect letter results in the removal of one attempt.")
-    print("4. Good luck!") 
+    print("4. Good luck!")
+
+
+def get_player_name():
+    player = input("What is your name? ")
+    print(f"\nHello, {player}! Let's start the game!\n")
 
 
 def main():
@@ -77,6 +82,9 @@ def main():
         print(f"\nHint: {hint}")
 
 
-# Start the game (call the main function)
+# Display rules and get player name
 rules()
+get_player_name()
+
+# Start the game (call the main function)
 main()
