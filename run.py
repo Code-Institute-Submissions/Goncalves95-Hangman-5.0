@@ -34,7 +34,7 @@ def get_player_name():
     print(f"\nHello, {player}! Let's start the game!\n")
 
 
-# Main function for the game 
+# Main function for the game
 def main():
     # All the words the game gone display random
     words = [
@@ -52,6 +52,65 @@ def main():
     hint = word_info['hint']
     guessed_letters = []
     attempts = 6
+    # This status gone appear wuhen the player fail on the guess
+    hangman_status = [
+        """
+           _____
+          |     |
+                |
+                |
+                |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+                |
+                |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+          |     |
+                |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+         /|     |
+                |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+         /|\\    |
+                |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+         /|\\    |
+         /      |
+                |
+        """,
+        """
+           _____
+          |     |
+          O     |
+         /|\\    |
+         / \\    |
+                |
+        """
+    ]
 
     # First's prinst for appear on game menu
     display_title()
@@ -70,13 +129,14 @@ def main():
         print(f"\nWord: {display_word}")
         print(f"Attempts left: {attempts}")
         print(f"Guessed letters: {', '.join(guessed_letters)}")
+        print(hangman_status[6 - attempts])
 
         if display_word == secret_word:
-            print("Congratulations! You guessed the word correctly.")
+            print(f"Congratulations! You guessed the word correctly.")
             break
 
         if attempts == 0:
-            print("Game over! The secret word was '{secret_word}'.")
+            print(f"Game over! The secret word was '{secret_word}'.")
             break
 
         # Input for the palyer put the guess letter
@@ -91,11 +151,12 @@ def main():
                 guessed_letters.append(guess)
             else:
                 print("Wrong guess!")
+                attempts -= 1
                 guessed_letters.append(guess)
         else:
             print("Invalid input. Please enter a single letter.")
             continue
-        
+
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
         display_title()
