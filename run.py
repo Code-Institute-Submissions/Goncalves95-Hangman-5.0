@@ -1,6 +1,7 @@
 import random
 import os
 
+
 def main():
     words = [
         {'word': 'pineapple', "hint': 'It's a tropical fruit."},
@@ -15,7 +16,21 @@ def main():
     word_info = random.choice(words)
     secret_word = word_info['word'].lower()
     hint = word_info['hint']
+    guessed_letters = []
+    attempts = 6
 
     print("Welcome to Hangman!")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
+
+    while True:
+        display_word = ""
+        for letter in scret_word:
+            if letter in guessed_letter:
+                display_word += letter
+            else:
+                display_word += "_"
+
+        print(f"\nWord: {display_word}")
+        print(f"Attempts left: {attempts}")
+        print(f"Guessed letters: {', '.join(guessed_letters)}")
