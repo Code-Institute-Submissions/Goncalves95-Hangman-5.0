@@ -1,6 +1,9 @@
 import random
 import os
 
+def clean_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def main():
     words = [
@@ -58,6 +61,7 @@ def main():
             print("Invalid input. Please enter a single letter.")
             continue
 
+        clean_screen()
         print("Welcome to Hangman 5.0!")
         print("Try to guess the hidden word. You have 6 attempts.")
         print(f"\nHint: {hint}")
