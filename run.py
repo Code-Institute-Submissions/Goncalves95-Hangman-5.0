@@ -34,3 +34,7 @@ def main():
         print(f"\nWord: {display_word}")
         print(f"Attempts left: {attempts}")
         print(f"Guessed letters: {', '.join(guessed_letters)}")
+
+        if display_word = secret_word:
+            print("Congratulations! You guessed the word correctly.")
+            break
