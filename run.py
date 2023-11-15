@@ -90,6 +90,14 @@ def main():
         print("Try to guess the hidden word. You have 6 attempts.")
         print(f"\nHint: {hint}")
 
+    play_again = input("Do you want play again? (yes/no): ")
+
+    if play_again.lower() == "yes":
+        clean_screen()
+        main()
+    else:
+        print("Thank you for playng Hangman 5.0!")
+
 
 # Display rules and get player name
 rules()
