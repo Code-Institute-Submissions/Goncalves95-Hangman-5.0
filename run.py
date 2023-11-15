@@ -43,6 +43,21 @@ def main():
             print("Game over! The secret word was '{secret_word}'.")
             break
 
+        guess = input("Guess a letter: ").lower()
+
+        if guess.isalpha() and len(guess) == 1:
+            if guess in guessed_letters:
+                print("You already guessed that letter. Try again.")
+            elif guess in secret_word:
+                print("Correct guess!")
+                guessed_letters.append(guess)
+            else:
+                print("Wrong guess!")
+                guessed_letters.append(guess)
+        else:
+            print("Invalid input. Please enter a single letter.")
+            continue
+
 
 # Start the game (call the main function)
 main()
