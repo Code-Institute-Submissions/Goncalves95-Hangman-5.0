@@ -51,7 +51,7 @@ def rules():
 
 # Function for get the player name
 def get_player_name():
-    player = input("What is your name? ")
+    player = input("What is your name?\n ")
     print(f"\nHello, {player}! Let's start the game!\n")
     return player
 
