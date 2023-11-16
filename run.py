@@ -1,5 +1,26 @@
+import gspread
+from google.oauth2.service_account import Credentials
+from colorama import init, Fore, Back
 import random
 import os
+
+# Scope variabel
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('Hangman5.0')
+
+words = SHEET.worksheet('words')
+
+data = words.get_all_values()
+
+print(data)
 
 
 # Function to clean the console screen when the next atempt
@@ -39,14 +60,22 @@ def get_player_name():
 def main():
     # All the words the game gone display random
     words = [
-        {'word': 'pineapple', 'hint': "It's a tropical fruit."},
-        {'word': 'strawberry', 'hint': "It's a small, red fruit."},
-        {'word': 'kiwi', 'hint': "It's a small, brown, and fuzzy fruit."},
-        {'word': 'watermelon', 'hint': "It's a large fruit, green on the outside and red on the inside."},
-        {'word': 'grape', 'hint': "It's a small, round fruit, often found in clusters."},
-        {'word': 'peach', 'hint': "It's a soft fruit with a velvety skin."},
-        {'word': 'avocado', 'hint': "It's a fruit with a large pit in the center."},
-        {'word': 'mango', 'hint': "It's a juicy fruit with a large seed in the middle."}
+        {'word': 'pineapple', 'hint':
+            "It's a tropical fruit."},
+        {'word': 'strawberry', 'hint':
+            "It's a small, red fruit."},
+        {'word': 'kiwi', 'hint':
+            "It's a small, brown, and fuzzy fruit."},
+        {'word': 'watermelon', 'hint':
+            "It's a large fruit, green on the outside and red on the inside."},
+        {'word': 'grape', 'hint':
+            "It's a small, round fruit, often found in clusters."},
+        {'word': 'peach', 'hint':
+            "It's a soft fruit with a velvety skin."},
+        {'word': 'avocado', 'hint':
+            "It's a fruit with a large pit in the center."},
+        {'word': 'mango', 'hint':
+            "It's a juicy fruit with a large seed in the middle."}
     ]
     word_info = random.choice(words)
     secret_word = word_info['word'].lower()
@@ -113,7 +142,7 @@ def main():
         """
     ]
 
-    # First's prinst for appear on game menu
+    # First's print's for appear on game menu
     display_title()
     print("Welcome to Hangman 5.0!")
     print("Try to guess the hidden word. You have 6 attempts.")
