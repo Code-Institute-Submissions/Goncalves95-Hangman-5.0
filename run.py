@@ -163,11 +163,11 @@ def main():
         print(hangman_status[6 - attempts])
 
         if display_word == secret_word:
-            print(f"Congratulations! You guessed the word correctly.")
+            print(Back.GREEN + f"Congratulations! You guessed the word correctly." + Back.RESET)
             break
 
         if attempts == 0:
-            print(f"Game over! The secret word was '{secret_word}'.")
+            print(Back.RED + f"Game over! The secret word was '{secret_word}'." + Back.RESET)
             break
 
         # Input for the palyer put the guess letter
