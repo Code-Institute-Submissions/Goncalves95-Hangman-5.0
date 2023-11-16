@@ -51,9 +51,13 @@ def rules():
 
 # Function for get the player name
 def get_player_name():
-    player = input("What is your name?\n ")
-    print(f"\nHello, {player}! Let's start the game!\n")
-    return player
+    while True:
+        player = input("What is your name?\n ")
+        if player.isalpha():
+            print(f"Hello, {player}! Let's start the game!\n")
+            return player
+        else:
+            print("Please only enter letters in your name.\n")
 
 
 # Main function for the game
