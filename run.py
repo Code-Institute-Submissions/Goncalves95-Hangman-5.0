@@ -58,30 +58,18 @@ def get_player_name():
             print("Please only enter letters in your name.\n")
 
 
+def random_words():
+    word_sheet = data[1:]
+    random_word = random.choice(word_sheet)
+    return random_word
+
+
 # Main function for the game
 def main():
-    # All the words the game gone display random
-    words = [
-        {'word': 'pineapple', 'hint':
-            "It's a tropical fruit."},
-        {'word': 'strawberry', 'hint':
-            "It's a small, red fruit."},
-        {'word': 'kiwi', 'hint':
-            "It's a small, brown, and fuzzy fruit."},
-        {'word': 'watermelon', 'hint':
-            "It's a large fruit, green on the outside and red on the inside."},
-        {'word': 'grape', 'hint':
-            "It's a small, round fruit, often found in clusters."},
-        {'word': 'peach', 'hint':
-            "It's a soft fruit with a velvety skin."},
-        {'word': 'avocado', 'hint':
-            "It's a fruit with a large pit in the center."},
-        {'word': 'mango', 'hint':
-            "It's a juicy fruit with a large seed in the middle."}
-    ]
-    word_info = random.choice(words)
-    secret_word = word_info['word'].lower()
-    hint = word_info['hint']
+    # All the words the game gone display random come from google sheet
+    word_info = random_words()
+    secret_word = word_info[0].lower()
+    hint = word_info[1]
     guessed_letters = []
     attempts = 6
     # This status gone appear wuhen the player fail on the guess
