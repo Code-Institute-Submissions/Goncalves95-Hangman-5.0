@@ -20,8 +20,6 @@ words = SHEET.worksheet('words')
 
 data = words.get_all_values()
 
-print(data)
-
 
 # Function to clean the console screen when the next atempt
 def clean_screen():
