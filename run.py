@@ -170,12 +170,12 @@ def main():
         str3 = f"You already guessed '{guess}'. Try again."
         if guess.isalpha() and len(guess) == 1:
             if guess in guessed_letters:
-                print(Back.YELLOW + str3 + Back.RESET)
+                print(Fore.YELLOW + str3 + Fore.RESET)
             elif guess in secret_word:
-                print("Correct guess!")
+                print(Fore.GREEN + "Correct guess!" + Fore.RESET)
                 guessed_letters.append(guess)
             else:
-                print("Wrong guess!")
+                print(Fore.RED + "Wrong guess!" + Fore.RESET)
                 attempts -= 1
                 guessed_letters.append(guess)
         else:
