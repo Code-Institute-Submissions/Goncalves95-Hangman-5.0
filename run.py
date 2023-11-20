@@ -41,10 +41,15 @@ def display_title():
 # Function for the rules presentation
 def rules():
     print("Welcome to Hangman 5.0!")
+    time.sleep(1)
     print("Game rules:")
+    time.sleep(1)
     print("1. You must guess the hidden word before you run out of tries.")
+    time.sleep(1)
     print("2. You have 6 attempts.")
+    time.sleep(1)
     print("3. Each incorrect letter results in the removal of one attempt.")
+    time.sleep(1)
     print("4. Good luck!")
 
 

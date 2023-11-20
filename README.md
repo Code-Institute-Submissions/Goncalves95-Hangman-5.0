@@ -51,6 +51,7 @@ The design of the website is minimalist, yet fun. The user can experience the ga
 - Main Game Section:
   - After the player insert the name he can start play, appear the first word for guess. the player need start put one letter for see if the guess its right or wrong. In this area the player can see one hit to find more easy the word. Appear to one image of the hangman, he start appear when the player lose 1 guess.
 
+
 <img src="assets/images/start_the_game.png" alt="game section" width="800">
 
   - If the user guesses a correct letter, the dash is replaced with the guess and the letter go to "Guessed letters:", the number of lives and hangman image stays the same.
@@ -78,7 +79,7 @@ The design of the website is minimalist, yet fun. The user can experience the ga
 
   - After the play answer the play again question:
     - If the player say yes the game start again with another random word. 
-    - If the player say no one message gone display of thank you:
+    - If the player say no (or another letter) one message gone display of thank you:
 
 <img src="assets/images/thank_you_info.png" alt="Game Over" width="800">
 
@@ -100,6 +101,8 @@ To test my game I have opened it on different devices, to see if it was working 
 - CI Python Linter
   - No errors were returned when passing the final version through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
+<img src="assets/images/validation_cl.png" alt="CI Python Linter" width="800">
+
 ### Fixed Bugs
 - Long lines on Python code:
   - The solution was to create strings with the variable name outside the function.
@@ -107,27 +110,8 @@ To test my game I have opened it on different devices, to see if it was working 
   - The "Wrong guess" or "Correct guess!" prints don't appear on the console, so I've created a 1-minute sleep time so that the player can see the prints.
 
 ### Unfixed Bugs
-
-### Game in action
-
-- Here are some screenshots of the game in action
-<details>
-  <summary> Desktop </summary>
+  - none
   
-- Home page:
-
-   <img url="assets/images/" alt="responsive" width="800">
-
-- Game page:
-
-   <img src="assets/images/responsive.png" alt="responsive" width="800">
-
-- 404 Error page:
-
-   <img src="assets/images/responsive.png" alt="responsive" width="800">
-
-</details>
-
 ## Deployment
 - The deployment was done through heroku. following the steps below:
   - Preparing for deployment:
@@ -161,3 +145,4 @@ The live link can be found here - [Live Website](https://hangman50-78a96d76c638.
 - CodeAnywhere
 - Heroku
 - Google API (sheets)
+- Python Library´s
