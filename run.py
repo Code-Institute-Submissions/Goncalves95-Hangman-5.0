@@ -48,9 +48,9 @@ def rules():
     print("4. Good luck!")
 
 
-# Function for give a thanks menssage on the end when the player dont want play again
+# Function for give a thanks menssage on the end
 def thanks_animation():
-    print(f"Thank you {player_name} for playing Hangman 5.0!")
+    print(f"Thank you {player} for playing Hangman 5.0!")
     time.sleep(0.5)
     print("Come back soon!")
     time.sleep(0.5)
@@ -145,7 +145,7 @@ def main():
 
     # First's print's for appear on game menu
     display_title()
-    print(f"Welcome to Hangman 5.0! {player_name}")
+    print(f"Welcome to Hangman 5.0! {player}")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
 
@@ -163,12 +163,12 @@ def main():
         # Display the Hangman status
         print(hangman_status[6 - attempts])
 
-        str1 = f"Congratulations {player_name}! You guessed correctly."
+        str1 = f"Congratulations {player}! You guessed correctly."
         if display_word == secret_word:
             print(Back.GREEN + str1 + Back.RESET)
             break
 
-        str2 = f"Game over {player_name}! The secret word was '{secret_word}'."
+        str2 = f"Game over {player}! The secret word was '{secret_word}'."
         if attempts == 0:
             print(Back.RED + str2 + Back.RESET)
             break
@@ -188,24 +188,26 @@ def main():
                 print(Fore.RED + "Wrong guess!" + Fore.RESET)
                 attempts -= 1
                 guessed_letters.append(guess)
-        elif guess.isalpha() and len(guess) > 1: # give the oportunity to player guess the all word in one time 
+        # player guess word in one time
+        elif guess.isalpha() and len(guess) > 1:
+            str4 = f"Congratulations {player}! You guessed the word correctly."
             if guess == secret_word:
-                print(Back.GREEN + f"Congratulations {player_name}! You guessed the word correctly." + Back.RESET)
+                print(Back.GREEN + str4 + Back.RESET)
                 break
             else:
-                print(Fore.RED + "Wrong guess! The word is not correct." + Fore.RESET)
+                str5 = "Wrong guess! The word is not correct."
+                print(Fore.RED + str5 + Fore.RESET)
                 attempts -= 1
         else:
             print("Invalid input. Please enter a single letter.")
             continue
-
-         # Adicionar um atraso de 3 segundos antes de limpar a tela
+        # Adicionar um atraso de 3 segundos antes de limpar a tela
         time.sleep(1)
 
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
         display_title()
-        print(f"Welcome to Hangman 5.0 {player_name}!")
+        print(f"Welcome to Hangman 5.0 {player}!")
         print("Try to guess the hidden word. You have 6 attempts.")
         print(f"\nHint: {hint}")
 
@@ -222,7 +224,7 @@ def main():
 # Display rules and get player name
 display_title()
 rules()
-player_name = get_player_name()
+player = get_player_name()
 
 # Start the game (call the main function)
 main()
