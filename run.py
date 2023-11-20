@@ -193,7 +193,7 @@ def main():
             continue
 
          # Adicionar um atraso de 3 segundos antes de limpar a tela
-        time.sleep(2)
+        time.sleep(1.5)
 
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
