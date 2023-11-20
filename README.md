@@ -48,6 +48,11 @@ The design of the website is minimalist but fun. The user can try out the game o
 
 <img src="assets/images/main_function.png" alt="welcome page" width="800">
 
+- When the player write the play name:
+  - when the player writes a value other than letters in the middle of the name, an error will appear asking for letters only. 
+
+<img src="assets/images/imput_name.png" alt="Error on name just letters" width="800">
+
 - Main Game Section:
   - Once the player has entered their name they can start playing, the first word to guess appears. The player needs to start placing a letter to see if the guess is right or wrong. In this area the player can see a hit to find out the word more easily. An image of the hangman appears, he starts to appear when the player loses 1 guess.
 
