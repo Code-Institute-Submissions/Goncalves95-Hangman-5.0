@@ -1,30 +1,125 @@
-HELLO, Welcome to HANGMAN 5.0,
+# HANGMAN 5.0!
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+HELLO, Welcome to HANGMAN 5.0, <br>
+I made the decision to create a game after learning Python. During that time, I came up with the idea of creating the hangman game. Like this i can creat a google sheet for the game pick up the words.
 
-## Reminders
+The game is designed to be enjoyable and bring back pleasant memories for its users.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+![Responsice Mockup]()
 
-## Creating the Heroku app
+[See deployed website](https://hangman50-78a96d76c638.herokuapp.com/)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Table of content
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- [Feed the Snake!](#feed-the-snake)
+  - [Table of content](#table-of-content)
+  - [Design and User Experience](#design-and-user-experience)
+    - [Design](#design)
+  - [Features](#features)
+    - [Footer](#footer)
+    - [Home Page](#home-page)
+    - [Game Page](#game-page)
+    - [404 Error Page](#404-error-page)
+  - [Testing](#testing)
+    - [Tests](#tests)
+    - [Validator Testing](#validator-testing)
+    - [Fixed Bugs](#fixed-bugs)
+    - [Unfixed Bugs](#unfixed-bugs)
+    - [Performance](#performance)
+  - [Deployment](#deployment)
+    - [Live Website](#live-website)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+  - [Technologies used](#technologies-used)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Design and User Experience
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Design
 
-Connect your GitHub repository and deploy as normal.
+The design of the website is minimalist, yet fun. The user can experience the game on a already creat tamplate from my school @CodeInstitute.
 
-## Constraints
+## Features
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+There are just one page for the python can run
 
----
+## Testing
 
-Happy coding!
+To test my game I have opened it on different devices, to see if it was working as expected.
+
+- Browser tested:
+  - Chrome
+  - Firefox
+  - Safari
+
+- Operating systems:
+  - Android
+  - iOS
+
+### Validator Testing
+
+- CI Python Linter
+  - No errors were returned when passing the final version through the official [CI Python Linter](https://pep8ci.herokuapp.com/#)
+  - ![HTML validator](assets/media/html_validator.png)
+
+### Fixed Bugs
+- Long lines on Python code:
+  - The solution was to create strings with the variable name outside the function.
+- The prints weren't showing:
+  - The "Wrong guess" or "Correct guess!" prints don't appear on the console, so I've created a 1-minute sleep time so that the player can see the prints.
+
+### Unfixed Bugs
+
+### Game in action
+
+- Here are some screenshots of the game in action
+<details>
+  <summary> Desktop </summary>
+  
+- Home page:
+
+   ![Desktop - home page](assets/media/main_page_web.png)
+
+- Game page:
+
+   ![Desktop - game page](assets/media/game_page_web.png)
+
+- 404 Error page:
+
+   ![Desktop - 404 error page](assets/media/error_404_page_web.png)
+
+</details>
+
+## Deployment
+- The deployment was done through heroku. following the steps below:
+  - Preparing for deployment:
+      - Add a new line character ("\n") at the end of each input request.
+      - Create a list of dependancies to go into the requirements.txt file by typing "pip3 freeze > requirements.txt" into the terminal.
+  - Deployment:
+      - Log into Heroku and in the dashboard, press the "Create new app" button.
+      - Click on the "Settings" tab, scroll down to the "Reveal Config Vars" button and click on it to create config vars.
+      - Add the first config vars. The key is "CREDS" and value is the contents of the creds.json file.
+      - Add the second config vars. The key is "PORT" and value is "8000".
+      - Click on the "Add buildpack" button on the same page and add the buildpacks "python" and "node.js" in this order.
+      - Click on the "Deploy" tab.
+      - Choose the "GitHub" deployment method and then connect to GitHub.
+      - Scroll down to the "Automatic deploys" section, select the "main" branch to deploy from and then press the "Enable Automatic Deploys" button to deploy the project.
+
+### Live Website
+
+The live link can be found here - [Live Website](https://hangman50-78a96d76c638.herokuapp.com/)
+
+## Credits
+
+### Content
+
+- Hangman 5.0 big title from - [[Text Editor](https://texteditor.com/)
+- 
+
+## Technologies used
+
+- Python
+- GitHub
+- CodeAnywhere
+- Heroku
+- Google API (sheets)
