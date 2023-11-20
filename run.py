@@ -188,12 +188,19 @@ def main():
                 print(Fore.RED + "Wrong guess!" + Fore.RESET)
                 attempts -= 1
                 guessed_letters.append(guess)
+        elif guess.isalpha() and len(guess) > 1: # give the oportunity to player guess the all word in one time 
+            if guess == secret_word:
+                print(Back.GREEN + f"Congratulations {player}! You guessed the word correctly." + Back.RESET)
+                break
+             else:
+                print(Fore.RED + "Wrong guess! The word is not correct." + Fore.RESET)
+                attempts -= 1
         else:
             print("Invalid input. Please enter a single letter.")
             continue
 
          # Adicionar um atraso de 3 segundos antes de limpar a tela
-        time.sleep(1.5)
+        time.sleep(1)
 
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
