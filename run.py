@@ -48,6 +48,16 @@ def rules():
     print("4. Good luck!")
 
 
+# Function for give a thanks menssage on the end when the player dont want play again
+def thanks_animation():
+    print(f"Thank you {player_name} for playing Hangman 5.0!")
+    time.sleep(0.5)
+    print("Come back soon!")
+    time.sleep(0.5)
+    print("Goodbye!")
+    time.sleep(1)
+
+
 # Function for get the player name
 def get_player_name():
     while True:
@@ -199,7 +209,7 @@ def main():
         clean_screen()
         main()
     else:
-        print(f"Thank you {player_name} for playng Hangman 5.0!")
+        thanks_animation()
 
 
 # Display rules and get player name
