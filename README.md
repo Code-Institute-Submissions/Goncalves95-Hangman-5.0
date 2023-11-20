@@ -59,8 +59,7 @@ To test my game I have opened it on different devices, to see if it was working 
 ### Validator Testing
 
 - CI Python Linter
-  - No errors were returned when passing the final version through the official [CI Python Linter](https://pep8ci.herokuapp.com/#)
-  - ![HTML validator](assets/media/html_validator.png)
+  - No errors were returned when passing the final version through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
 ### Fixed Bugs
 - Long lines on Python code:
@@ -113,8 +112,8 @@ The live link can be found here - [Live Website](https://hangman50-78a96d76c638.
 
 ### Content
 
-- Hangman 5.0 big title from - [[Text Editor](https://texteditor.com/)
-- 
+- Hangman 5.0 big title from - [Text Editor](https://texteditor.com/)
+- Learning to create the game with - [Python for Beginners](https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman) and [Hashtag](https://www.hashtagtreinamentos.com/jogo-da-forca-em-python) and [DIO](https://www.dio.me/articles/jogo-da-forca-em-python)
 
 ## Technologies used
 
