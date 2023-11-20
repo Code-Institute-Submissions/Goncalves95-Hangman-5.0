@@ -39,6 +39,10 @@ The game is designed to be enjoyable and bring back pleasant memories for its us
 
 The design of the website is minimalist but fun. The user can try out the game on a printed circuit board already created by my school @CodeInstitute.
 
+# Wireframes
+
+<img src="assets/images/play_map.png" alt="Wireframe of the game" width="800">
+
 ## Features
 
  - There are just one page for the python can run
