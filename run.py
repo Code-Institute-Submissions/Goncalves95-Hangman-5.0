@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from colorama import init, Fore, Back
 import random
+import time
 import os
 
 # Scope variabel
@@ -180,6 +181,9 @@ def main():
         else:
             print("Invalid input. Please enter a single letter.")
             continue
+
+         # Adicionar um atraso de 3 segundos antes de limpar a tela
+        time.sleep(3)
 
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
