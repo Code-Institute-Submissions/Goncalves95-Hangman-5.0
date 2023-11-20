@@ -190,7 +190,7 @@ def main():
                 guessed_letters.append(guess)
         elif guess.isalpha() and len(guess) > 1: # give the oportunity to player guess the all word in one time 
             if guess == secret_word:
-                print(Back.GREEN + f"Congratulations {player}! You guessed the word correctly." + Back.RESET)
+                print(Back.GREEN + f"Congratulations {player_name}! You guessed the word correctly." + Back.RESET)
                 break
             else:
                 print(Fore.RED + "Wrong guess! The word is not correct." + Fore.RESET)
