@@ -134,7 +134,7 @@ def main():
 
     # First's print's for appear on game menu
     display_title()
-    print("Welcome to Hangman 5.0! {player_name}")
+    print(f"Welcome to Hangman 5.0! {player_name}")
     print("Try to guess the hidden word. You have 6 attempts.")
     print(f"\nHint: {hint}")
 
@@ -152,7 +152,7 @@ def main():
         # Display the Hangman status
         print(hangman_status[6 - attempts])
 
-        str1 = "Congratulations {player_name}! You guessed the word correctly."
+        str1 = f"Congratulations {player_name}! You guessed the word correctly."
         if display_word == secret_word:
             print(Back.GREEN + str1 + Back.RESET)
             break
@@ -183,7 +183,7 @@ def main():
         # Clean the screen dor dont appear all the diferent attempts
         clean_screen()
         display_title()
-        print("Welcome to Hangman 5.0!")
+        print(f"Welcome to Hangman 5.0 {player_name}!")
         print("Try to guess the hidden word. You have 6 attempts.")
         print(f"\nHint: {hint}")
 
@@ -194,7 +194,7 @@ def main():
         clean_screen()
         main()
     else:
-        print("Thank you for playng Hangman 5.0!")
+        print(f"Thank you {player_name} for playng Hangman 5.0!")
 
 
 # Display rules and get player name
