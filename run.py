@@ -166,9 +166,10 @@ def main():
         guess = input("Guess a letter: ").lower()
 
         # IF/ELSE to check the right letter or wrong letter and a valid input
+        str3 = f"You already guessed '{guess}'. Try again."
         if guess.isalpha() and len(guess) == 1:
             if guess in guessed_letters:
-                print("You already guessed that letter. Try again.")
+                print(Back.yellow + str3 + Back.RESET)
             elif guess in secret_word:
                 print("Correct guess!")
                 guessed_letters.append(guess)
