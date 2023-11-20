@@ -5,7 +5,7 @@ I made the decision to create a game after learning Python. During that time, I 
 
 The game is designed to be enjoyable and bring back pleasant memories for its users.
 
-![Responsice Mockup]()
+<img src="assets/images/responsive.png" alt="responsive" width="800">
 
 [See deployed website](https://hangman50-78a96d76c638.herokuapp.com/)
 
@@ -41,7 +41,46 @@ The design of the website is minimalist, yet fun. The user can experience the ga
 
 ## Features
 
-There are just one page for the python can run
+ - There are just one page for the python can run
+
+- Introduction and rules section:
+  - In this section we can see in a big way the name of the game. a message of welcome and the rules the game. The player can find the first interaction for put player name.
+
+<img src="assets/images/main_function.png" alt="welcome page" width="800">
+
+- Main Game Section:
+  - After the player insert the name he can start play, appear the first word for guess. the player need start put one letter for see if the guess its right or wrong. In this area the player can see one hit to find more easy the word. Appear to one image of the hangman, he start appear when the player lose 1 guess.
+
+<img src="assets/images/start_the_game.png" alt="game section" width="800">
+
+  - If the user guesses a correct letter, the dash is replaced with the guess and the letter go to "Guessed letters:", the number of lives and hangman image stays the same.
+
+<img src="assets/images/letter_right.png" alt="right guess" width="800">
+
+  - An error message will appear if the user enters anything other than a letter for their guess.
+
+<img src="assets/images/just_letters.png" alt="anything than letters is allow" width="800">
+<img src="assets/images/space_not_allowd.png" alt="space not allow" width="800">
+
+  - When the player lose the guess the Hangman image start to builded.
+
+<img src="assets/images/space_not_allowd.png" alt="space not allow" width="800">
+<img src="assets/images/large_wrong_guess.png" alt="Game Over" width="800">
+
+  - In the end when the player lost all the guess its game over and the Hangman image appear complete and one message ""Game over Fernando! The secret word was
+'guess'". And one question for yes/no for "Do you want play again? 
+
+<img src="assets/images/game_over.png" alt="Game Over" width="800">
+
+  - When the player guess the word, appear one message "Congratulations (name of player)! You guessed the word correctly." And one question for yes/no for "Do you want play again? 
+
+<img src="assets/images/right_guess.png" alt="Game Over" width="800">
+
+  - After the play answer the play again question:
+    - If the player say yes the game start again with another random word. 
+    - If the player say no one message gone display of thank you:
+
+<img src="assets/images/thank_you_info.png" alt="Game Over" width="800">
 
 ## Testing
 
@@ -77,15 +116,15 @@ To test my game I have opened it on different devices, to see if it was working 
   
 - Home page:
 
-   ![Desktop - home page](assets/media/main_page_web.png)
+   <img url="assets/images/" alt="responsive" width="800">
 
 - Game page:
 
-   ![Desktop - game page](assets/media/game_page_web.png)
+   <img src="assets/images/responsive.png" alt="responsive" width="800">
 
 - 404 Error page:
 
-   ![Desktop - 404 error page](assets/media/error_404_page_web.png)
+   <img src="assets/images/responsive.png" alt="responsive" width="800">
 
 </details>
 
