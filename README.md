@@ -37,24 +37,24 @@ The game is designed to be enjoyable and bring back pleasant memories for its us
 
 ### Design
 
-The design of the website is minimalist, yet fun. The user can experience the game on a already creat tamplate from my school @CodeInstitute.
+The design of the website is minimalist but fun. The user can try out the game on a printed circuit board already created by my school @CodeInstitute.
 
 ## Features
 
  - There are just one page for the python can run
 
 - Introduction and rules section:
-  - In this section we can see in a big way the name of the game. a message of welcome and the rules the game. The player can find the first interaction for put player name.
+  - In this section, we can mostly see the name of the game, a welcome message and the rules of the game. The player can find the first interaction to enter the player's name.
 
 <img src="assets/images/main_function.png" alt="welcome page" width="800">
 
 - Main Game Section:
-  - After the player insert the name he can start play, appear the first word for guess. the player need start put one letter for see if the guess its right or wrong. In this area the player can see one hit to find more easy the word. Appear to one image of the hangman, he start appear when the player lose 1 guess.
+  - Once the player has entered their name they can start playing, the first word to guess appears. The player needs to start placing a letter to see if the guess is right or wrong. In this area the player can see a hit to find out the word more easily. An image of the hangman appears, he starts to appear when the player loses 1 guess.
 
 
 <img src="assets/images/start_the_game.png" alt="game section" width="800">
 
-  - If the user guesses a correct letter, the dash is replaced with the guess and the letter go to "Guessed letters:", the number of lives and hangman image stays the same.
+  - If the user guesses a letter correctly, the dash is replaced by the guess and the letter moves to "Letters guessed:", the number of lives and the image of the executioner remain unchanged.
 
 <img src="assets/images/letter_right.png" alt="right guess" width="800">
 
@@ -63,29 +63,40 @@ The design of the website is minimalist, yet fun. The user can experience the ga
 <img src="assets/images/just_letters.png" alt="anything than letters is allow" width="800">
 <img src="assets/images/space_not_allowd.png" alt="space not allow" width="800">
 
-  - When the player lose the guess the Hangman image start to builded.
+  - When the player loses the guess, the image of the hangman begins to build.
 
 <img src="assets/images/space_not_allowd.png" alt="space not allow" width="800">
 <img src="assets/images/large_wrong_guess.png" alt="Game Over" width="800">
 
-  - In the end when the player lost all the guess its game over and the Hangman image appear complete and one message ""Game over Fernando! The secret word was
-'guess'". And one question for yes/no for "Do you want play again? 
+  - At the end, when the player loses all their guesses, the game ends and the image of the hangman appears complete with the message "Game over (player_name)! The secret word was
+(guess)". And a yes/no question to "Do you want to play again? 
 
 <img src="assets/images/game_over.png" alt="Game Over" width="800">
 
-  - When the player guess the word, appear one message "Congratulations (name of player)! You guessed the word correctly." And one question for yes/no for "Do you want play again? 
+  - When the player guesses the word, a message appears "Congratulations (player's name)! You guessed the word correctly". And a yes/no question to "Do you want to play again? 
 
 <img src="assets/images/right_guess.png" alt="Game Over" width="800">
 
-  - After the play answer the play again question:
-    - If the player say yes the game start again with another random word. 
-    - If the player say no (or another letter) one message gone display of thank you:
+  - After the player, answer the question "Play again":
+    - If the player says yes, the game starts again with another random word. 
+    - If the player says "no" (or another letter), a thank you message is displayed:
 
 <img src="assets/images/thank_you_info.png" alt="Game Over" width="800">
+
+- Other Features:
+  - The Game takes the words for the game from a google API (google sheets), I create a list with the name of the fruit and a short description to help the player make the correct guess. 
+
+<img src="assets/images/sheets_api.png" alt="Google sheets" width="800">
+
+- All word in one time:
+  - To make the game more dynamic I've created a variable for the game, when the player already knows the word can match all the words and try to guess instead of matching letter by letter.
+
+<img src="assets/images/guess_all_word.png" alt="Palyer guess all word" width="800">
 
 ## Testing
 
 To test my game I have opened it on different devices, to see if it was working as expected.
+I have tested all possible outcomes of the game. 
 
 - Browser tested:
   - Chrome
