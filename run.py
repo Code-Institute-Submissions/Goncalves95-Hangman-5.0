@@ -152,7 +152,7 @@ def main():
         # Display the Hangman status
         print(hangman_status[6 - attempts])
 
-        str1 = f"Congratulations {player_name}! You guessed the word correctly."
+        str1 = f"Congratulations {player_name}! You guessed correctly."
         if display_word == secret_word:
             print(Back.GREEN + str1 + Back.RESET)
             break
