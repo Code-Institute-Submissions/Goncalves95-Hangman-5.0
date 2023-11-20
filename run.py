@@ -192,7 +192,7 @@ def main():
             if guess == secret_word:
                 print(Back.GREEN + f"Congratulations {player}! You guessed the word correctly." + Back.RESET)
                 break
-             else:
+            else:
                 print(Fore.RED + "Wrong guess! The word is not correct." + Fore.RESET)
                 attempts -= 1
         else:
