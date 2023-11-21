@@ -60,7 +60,7 @@ The design of the website is minimalist but fun. The user can try out the game o
 
 <img src="assets/images/start_the_game.png" alt="game section" width="800">
 
-  - If the user guesses a letter correctly, the dash is replaced by the guess and the letter moves to "Letters guessed:", the number of lives and the image of the executioner remain unchanged.
+  - If the user guesses a letter correctly, the dash is replaced by the guess and the letter moves to "Letters guessed", the number of lives and the image of the executioner remain unchanged.
 
 <img src="assets/images/letter_right.png" alt="right guess" width="800">
 
