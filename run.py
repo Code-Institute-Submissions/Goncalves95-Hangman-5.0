@@ -242,7 +242,7 @@ def main():
     # Play again if/else
     play_again = play_again_prompt
 
-    if play_again.lower() == "yes":
+    if play_again:
         clean_screen()
         main()
     else:
