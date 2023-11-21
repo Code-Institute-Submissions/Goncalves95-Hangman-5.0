@@ -97,7 +97,12 @@ The design of the website is minimalist but fun. The user can try out the game o
 - All word in one time:
   - To make the game more dynamic I've created a variable for the game, when the player already knows the word can match all the words and try to guess instead of matching letter by letter.
 
-<img src="assets/images/guess_all_word.png" alt="Palyer guess all word" width="800">
+<img src="assets/images/guess_all_word.png" alt="Player guess all word" width="800">
+
+- Play Again:
+  - When the player has to answer the question whether they want to play again, they are obliged to answer yes or no. Any other answer will generate an error. 
+
+<img src="assets/images/play_again_error.png" alt="Play Again error" width="800">
 
 ## Testing
 
