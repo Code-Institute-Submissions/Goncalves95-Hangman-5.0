@@ -1,9 +1,10 @@
 # HANGMAN 5.0!
 
 HELLO, Welcome to HANGMAN 5.0, <br>
-I made the decision to create a game after learning Python. During that time, I came up with the idea of creating the hangman game. Like this i can creat a google sheet for the game pick up the words.
 
-The game is designed to be enjoyable and bring back pleasant memories for its users.
+I decided to create a game after learning Python. During that time, I had the idea of creating a hangman's game. So I can create a Google spreadsheet for the game can pick up the words.
+
+The game is designed to be fun and bring back pleasant memories for its users.
 
 <img src="assets/images/responsive.png" alt="responsive" width="800">
 
@@ -11,27 +12,23 @@ The game is designed to be enjoyable and bring back pleasant memories for its us
 
 ## Table of content
 
-- [Feed the Snake!](#feed-the-snake)
+- [HANGMAN 5.0](#hangman-5.0)
   - [Table of content](#table-of-content)
   - [Design and User Experience](#design-and-user-experience)
     - [Design](#design)
+    - [Wireframes](#wireframes)
   - [Features](#features)
-    - [Footer](#footer)
-    - [Home Page](#home-page)
-    - [Game Page](#game-page)
-    - [404 Error Page](#404-error-page)
   - [Testing](#testing)
     - [Tests](#tests)
     - [Validator Testing](#validator-testing)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#unfixed-bugs)
-    - [Performance](#performance)
   - [Deployment](#deployment)
     - [Live Website](#live-website)
   - [Credits](#credits)
     - [Content](#content)
-    - [Media](#media)
   - [Technologies used](#technologies-used)
+
 
 ## Design and User Experience
 
@@ -39,7 +36,7 @@ The game is designed to be enjoyable and bring back pleasant memories for its us
 
 The design of the website is minimalist but fun. The user can try out the game on a printed circuit board already created by my school @CodeInstitute.
 
-# Wireframes
+### Wireframes
 
 <img src="assets/images/play_map.png" alt="Wireframe of the game" width="800">
 
@@ -107,6 +104,7 @@ The design of the website is minimalist but fun. The user can try out the game o
 To test my game I have opened it on different devices, to see if it was working as expected.
 I have tested all possible outcomes of the game. 
 
+### Tests
 - Browser tested:
   - Chrome
   - Firefox
