@@ -12,7 +12,7 @@ The game is designed to be fun and bring back pleasant memories for its users.
 
 ## Table of content
 
-- [HANGMAN 5.0](#hangman-5.0)
+- [HANGMAN 5.0!](#hangman-5.0!)
   - [Table of content](#table-of-content)
   - [Design and User Experience](#design-and-user-experience)
     - [Design](#design)
