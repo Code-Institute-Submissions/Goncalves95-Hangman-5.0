@@ -240,7 +240,7 @@ def main():
         print(f"\nHint: {hint}")
 
     # Play again if/else
-    play_again = play_again_prompt
+    play_again = play_again_prompt()
 
     if play_again:
         clean_screen()
