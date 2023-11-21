@@ -80,6 +80,28 @@ def random_words():
     return random_word
 
 
+# Error tratment in case he can not access to sheets
+word_info = random_words()
+if word_info:
+    secret_word = word_info[0].lower()
+    hint = word_info[1]
+else:
+    print("Error: Unable to fetch word and hint.")
+    exit()
+
+
+# For the play again the player just can answer 'yes' or 'no'
+def play_again_prompt():
+    while True:
+        response = input("Do you want to play again? (yes/no): ").lower()
+        if response == "yes":
+            return True
+        elif response == "no":
+            return False
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
+
 # Main function for the game
 def main():
     # All the words the game gone display random come from google sheet
@@ -217,7 +239,7 @@ def main():
         print(f"\nHint: {hint}")
 
     # Play again if/else
-    play_again = input("Do you want play again? (yes/no): ")
+    play_again = play_again_prompt
 
     if play_again.lower() == "yes":
         clean_screen()
