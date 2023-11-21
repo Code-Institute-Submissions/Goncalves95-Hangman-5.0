@@ -155,6 +155,7 @@ The live link can be found here - [Live Website](https://hangman50-78a96d76c638.
 
 - Hangman 5.0 big title from - [Text Editor](https://texteditor.com/)
 - Learning to create the game with - [Python for Beginners](https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman) and [Hashtag](https://www.hashtagtreinamentos.com/jogo-da-forca-em-python) and [DIO](https://www.dio.me/articles/jogo-da-forca-em-python)
+- To deploy it, I followed the steps in the Code Institute lesson. 
 
 ## Technologies used
 
