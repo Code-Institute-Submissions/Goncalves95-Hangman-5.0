@@ -74,6 +74,7 @@ def get_player_name():
             print("Please only enter letters in your name.\n")
 
 
+# Function to the game pick up random words on sheets
 def random_words():
     word_sheet = data[1:]
     random_word = random.choice(word_sheet)
@@ -90,7 +91,7 @@ else:
     exit()
 
 
-# For the play again the player just can answer 'yes' or 'no'
+# Function for the play again the player just can answer 'yes' or 'no'
 def play_again_prompt():
     while True:
         response = input("Do you want to play again? (yes/no): ").lower()
@@ -110,7 +111,7 @@ def main():
     hint = word_info[1]
     guessed_letters = []
     attempts = 6
-    # This status gone appear wuhen the player fail on the guess
+    # This status gone appear when the player fail on the guess
     hangman_status = [
         """
            _____
